@@ -29,8 +29,14 @@ function Home(){
 
         const roomRef = await database.ref(`rooms/${roomCode}`).get()
 
+        
+
         if(!roomRef.exists()){
             alert('Room does not exists!')
+            return;
+        }else if(roomRef.val().endendAt){
+            alert('Room already closed!')
+            return;
         }else{
             history.push(`/rooms/${roomCode}`)
         }

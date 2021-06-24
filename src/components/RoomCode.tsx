@@ -13,7 +13,7 @@ function RoomCode(props: RoomCodeProps){
     return(
         <button className="room-code" onClick={copyRoomCodeToClipBoard}>
             <div>
-                <img src={copyImg}/>
+                <img src={copyImg} alt="copy" />
             </div>
             <span>Sala #{props.code}</span>
         </button>
